@@ -1,3 +1,6 @@
+from utils.DateFormat import DateFormat
+
+
 class Movie():
 
     def __init__(self, id, title=None, duration=None, released=None) -> None:
@@ -11,5 +14,5 @@ class Movie():
             'id': self.id,
             'title': self.title,
             'duration': self.duration,
-            'released': self.released
+            'released': DateFormat.convert_date(self.released)
         }
